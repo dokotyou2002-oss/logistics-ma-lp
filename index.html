@@ -4,855 +4,412 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="物流業界の経営者様へ。人手不足・燃料費高騰・荷主との価格交渉——経営の選択肢を30分で整理。売り手手数料0円、匿名相談OK、物流業界15年以上のプロが対応。">
-    <meta name="keywords" content="物流M&A, 運送会社M&A, 物流業界事業承継, トラック会社売却, 物流DX, 2024年問題">
-    <meta name="robots" content="index, follow">
+
+    <!-- SEO Meta Tags -->
+    <title>物流ネクスト｜物流会社の経営・事業承継・M&A相談</title>
+    <meta name="description"
+        content="物流会社の経営者のための相談窓口。10年後を見据えた経営判断、事業承継、M&Aなど、物流業界を深く理解したプロフェッショナルがサポートします。売り手完全成功報酬型対応。">
+    <meta name="keywords" content="物流会社,M&A,事業承継,経営相談,トラック,運送会社,倉庫,物流センター,事業売却,2024年問題">
 
     <!-- OGP -->
-    <meta property="og:title" content="物流会社の経営で、こんな悩みはありませんか | 物流業界専門M&A相談">
-    <meta property="og:description" content="物流業界に精通したプロが、30分の無料相談で経営の選択肢を整理します。売却前提ではありません。">
+    <meta property="og:title" content="物流ネクスト｜物流会社の経営・事業承継・M&A相談">
+    <meta property="og:description" content="物流会社の経営者のための相談窓口。10年後を見据えた経営判断、事業承継、M&Aなど、物流業界を深く理解したプロフェッショナルがサポートします。">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ja_JP">
-
-    <title>物流会社の経営相談 | 物流業界専門・売り手手数料0円</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="./styles/components.css">
+    <link rel="stylesheet" href="./styles/pages.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚚</text></svg>">
 </head>
 
 <body>
-    <!-- ========================================
-       HERO SECTION - 共感導入型
-       ======================================== -->
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#hero" class="logo">
+                    <img src="./assets/images/logo.png" alt="物流ネクスト" class="logo-img">
+                </a>
+                <nav class="nav" id="nav">
+                    <a href="#concerns" class="nav-link">お悩み</a>
+                    <a href="#solutions" class="nav-link">サービス</a>
+                    <a href="#partners" class="nav-link">パートナー</a>
+                    <a href="#contact" class="nav-link nav-cta">無料相談</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================
+         1. HERO SECTION (MOTAS Style - Dark Navy)
+         ============================================ -->
     <section class="hero" id="hero">
-        <div class="hero__bg">
-            <img src="assets/images/hero_meeting.png" alt="明るいオフィスでのコンサルティングミーティング">
-            <div class="hero__overlay"></div>
+        <div class="hero-bg">
+            <img src="./assets/images/hero-executive.png" alt="物流会社経営者" loading="eager">
         </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="./assets/images/logo.png" alt="物流ネクスト" class="hero-logo-img">
+            <div class="hero-catchcopy">
+                <h1 class="hero-catchcopy-ja">10年後も、輝き続ける<br>物流会社へ。</h1>
+            </div>
+            <p class="hero-subcopy">
+                人材不足、利益構造の変化、外部環境の激変。<br>
+                その中で、経験豊富なプロフェッショナルが最後まで伴走し、<br class="pc-only">
+                現実的な選択肢を整理します。
+            </p>
+            <a href="#contact" class="free-consult-cta">【無料】現状と選択肢を整理する</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+        </div>
+    </section>
 
-        <div class="container">
-            <div class="hero__content">
-                <span class="hero__eyecatch">物流業界の経営者様へ</span>
+    <main>
+        <!-- ============================================
+             2. CONCERNS SECTION
+             ============================================ -->
+        <section class="concerns" id="concerns">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">物流会社の経営者から多く伺うお悩み</h2>
+                    <p class="section-subtitle">TOP 3</p>
+                </div>
 
-                <h1 class="hero__title">
-                    <span>人手不足、燃料費高騰、</span>
-                    <span>荷主との価格交渉——</span>
-                    <span><em>このまま続けていて、大丈夫だろうか。</em></span>
-                </h1>
+                <div class="concerns-list">
+                    <!-- Rank 1 -->
+                    <div class="concern-item">
+                        <div class="concern-rank">1</div>
+                        <div class="concern-content">
+                            <h4>外部環境の厳しさ</h4>
+                            <p>2024年問題／人材不足・高齢化／コスト増／利益構造の変化／コンプライアンス強化／業界再編の加速</p>
+                        </div>
+                    </div>
 
-                <p class="hero__subtitle">
-                    誰かに相談したいけど、物流のことを分かる相手がいない。<br>
-                    仲介会社からのDMは胡散臭い。顧問税理士はM&Aの専門家ではない。<br>
-                    <strong>そんな経営者様のために、この場所をつくりました。</strong>
+                    <!-- Rank 2 -->
+                    <div class="concern-item">
+                        <div class="concern-rank">2</div>
+                        <div class="concern-content">
+                            <h4>仲介選びの難しさ</h4>
+                            <p>DMが多すぎる／物流業界への理解が浅い／強引な提案をされる／手数料体系が不透明</p>
+                        </div>
+                    </div>
+
+                    <!-- Rank 3 -->
+                    <div class="concern-item">
+                        <div class="concern-rank">3</div>
+                        <div class="concern-content">
+                            <h4>後継者・社長交代問題</h4>
+                            <p>後継者がいない・育っていない／社長交代のタイミング／経営体制づくり／次世代への引き継ぎ</p>
+                        </div>
+                    </div>
+
+                    <!-- Other Voices -->
+                    <div class="concern-item other">
+                        <div class="concern-rank">+</div>
+                        <div class="concern-content">
+                            <h4>その他多く伺う声</h4>
+                            <p>業界再編前に動きたい／下請構造から脱却したい／選択肢を知りたい／ドライバーの将来が心配／価格転嫁ができない／設備投資の判断に迷う</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             3. SOLUTIONS SECTION (What We Can Do)
+             ============================================ -->
+        <section class="solutions" id="solutions">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">その悩みに、物流ネクストができること</h2>
+                </div>
+
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <div class="solution-icon">💰</div>
+                        <h3>売り手完全成功報酬型</h3>
+                        <p>着手金・中間金なし。成約時のみの報酬体系で、売り手様の負担を最小限に。</p>
+                        <span class="solution-note">（条件あり）</span>
+                    </div>
+                    <div class="solution-card">
+                        <div class="solution-icon">🤝</div>
+                        <h3>経験豊富なプロが最後まで伴走</h3>
+                        <p>M&A・経営支援15年以上のプロフェッショナルが、初回相談から成約まで一貫してサポート。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             4. WHY THIS MODEL WORKS
+             ============================================ -->
+        <section class="why-section" id="why">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">なぜこの条件で支援できるのか</h2>
+                </div>
+
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-card-icon">🏢</div>
+                        <h4>営業組織を持たない</h4>
+                        <p>固定費を最小化</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">📢</div>
+                        <h4>大規模広告に頼らない</h4>
+                        <p>紹介中心の集客</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">✓</div>
+                        <h4>成功報酬中心の設計</h4>
+                        <p>透明な料金体系</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">🤖</div>
+                        <h4>AI・ITで効率的</h4>
+                        <p>高品質を少人数で</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             5. PROFESSIONAL TEAM
+             ============================================ -->
+        <section class="team-section" id="team">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">少数精鋭プロフェッショナル体制</h2>
+                </div>
+
+                <p class="team-intro">
+                    M&A・経営支援15年以上の経験、事業会社経営者出身、銀行・証券経験者、<br class="pc-only">
+                    公認会計士などの専門家が、初回相談から成約まで一貫してサポートいたします。
                 </p>
 
-                <div class="hero__badges">
-                    <span class="badge">
-                        <svg class="badge__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 6v6l4 2"></path>
-                        </svg>
-                        初回30分 無料
-                    </span>
-                    <span class="badge">
-                        <svg class="badge__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                        </svg>
-                        匿名相談OK
-                    </span>
-                    <span class="badge">
-                        <svg class="badge__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 8v8M8 12h8"></path>
-                        </svg>
-                        売り手手数料 0円
-                    </span>
-                    <span class="badge">
-                        <svg class="badge__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 17H5a2 2 0 00-2 2v2h18v-2a2 2 0 00-2-2h-4M12 12a4 4 0 100-8 4 4 0 000 8z">
-                            </path>
-                        </svg>
-                        物流業界15年以上の知見
-                    </span>
-                </div>
-
-                <div class="hero__cta-wrapper">
-                    <p class="hero__cta-note"><strong>30分で、課題と選択肢を「見える化」します。</strong><br>今すぐ決めるのではなく、まず整理から。</p>
-                    <div class="hero__cta">
-                        <a href="#contact" class="btn btn--primary btn--large">
-                            30分の無料相談を予約する
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-card-icon">📊</div>
+                        <h4>M&A/経営支援</h4>
+                        <p>15年以上の経験</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">💼</div>
+                        <h4>経営経験</h4>
+                        <p>事業会社経営者出身</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">🏦</div>
+                        <h4>金融機関出身</h4>
+                        <p>銀行・証券経験者</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">📜</div>
+                        <h4>公認会計士</h4>
+                        <p>DD・バリュエーション</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========================================
-       PAIN SECTION - 深掘りペイン（事象→感情→未来）
-       ======================================== -->
-    <section class="section pain" id="pain">
-        <div class="container">
-            <div class="section__title">
-                <h2>人手不足・燃料費高騰——<br>物流経営者が直面する<em>7つの課題</em></h2>
-                <p class="section__subtitle">これらは、私たちに相談に来られる経営者様が最初に話されることです。</p>
-                <div class="divider"></div>
-            </div>
+        <!-- ============================================
+             6. PARTNER / BUYER TYPES
+             ============================================ -->
+        <section class="partners" id="partners">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">主なパートナー層</h2>
+                </div>
 
-            <div class="pain__grid">
-                <!-- Pain 1 -->
-                <div class="pain__card">
-                    <div class="pain__card-header">
-                        <div class="pain__card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path>
-                            </svg>
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <div class="partner-card-image">
+                            <img src="./assets/images/partner-logistics.png" alt="大手物流会社">
                         </div>
-                        <h3>人手不足と人件費高騰</h3>
-                    </div>
-                    <div class="pain__card-body">
-                        <p class="pain__fact"><strong>【現実】</strong>求人を出しても応募がない。給料を上げても定着しない。残った社員に負担が集中している。</p>
-                        <p class="pain__emotion"><strong>【感情】</strong>社員への申し訳なさと、自分の体力的な限界を感じる。このまま続けられるのか不安。</p>
-                        <p class="pain__future"><strong>【放置すると】</strong>受注を断る日が来る。事故リスクも上がる。気づいたときには手遅れになる。</p>
-                    </div>
-                </div>
-
-                <!-- Pain 2 -->
-                <div class="pain__card">
-                    <div class="pain__card-header">
-                        <div class="pain__card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"></path>
-                            </svg>
-                        </div>
-                        <h3>燃料費高騰と利益圧迫</h3>
-                    </div>
-                    <div class="pain__card-body">
-                        <p class="pain__fact"><strong>【現実】</strong>原油価格は高止まり。燃料サーチャージの交渉も進まない。売上は変わらないのに利益だけが減っていく。</p>
-                        <p class="pain__emotion"><strong>【感情】</strong>頑張っても報われない虚しさ。経営者としての無力感を覚える。</p>
-                        <p class="pain__future"><strong>【放置すると】</strong>赤字転落。借入金の返済が苦しくなる。最悪の場合、事業継続が困難に。</p>
-                    </div>
-                </div>
-
-                <!-- Pain 3 -->
-                <div class="pain__card">
-                    <div class="pain__card-header">
-                        <div class="pain__card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="1" y="3" width="15" height="13"></rect>
-                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                            </svg>
-                        </div>
-                        <h3>荷主への価格転嫁が進まない</h3>
-                    </div>
-                    <div class="pain__card-body">
-                        <p class="pain__fact"><strong>【現実】</strong>長年の付き合いで値上げを言い出しにくい。「他に頼むよ」と言われるのが怖い。</p>
-                        <p class="pain__emotion"><strong>【感情】</strong>下請けとしての立場の弱さを痛感する。でも、言わなければ潰れる。</p>
-                        <p class="pain__future"><strong>【放置すると】</strong>構造的な赤字体質が固定化。いつまでも自転車操業から抜け出せない。</p>
-                    </div>
-                </div>
-
-                <!-- Pain 4 -->
-                <div class="pain__card">
-                    <div class="pain__card-header">
-                        <div class="pain__card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                            </svg>
-                        </div>
-                        <h3>DX・自動化投資への不安</h3>
-                    </div>
-                    <div class="pain__card-body">
-                        <p class="pain__fact"><strong>【現実】</strong>配車システム、動態管理、デジタコ——どこから手をつければいいか分からない。</p>
-                        <p class="pain__emotion"><strong>【感情】</strong>時代に取り残される焦り。でも、投資に見合うのかも分からない。</p>
-                        <p class="pain__future"><strong>【放置すると】</strong>大手との効率差が広がる。選ばれない会社になっていく。</p>
-                    </div>
-                </div>
-
-                <!-- Pain 5 -->
-                <div class="pain__card">
-                    <div class="pain__card-header">
-                        <div class="pain__card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"></path>
-                            </svg>
-                        </div>
-                        <h3>後継者・事業承継の問題</h3>
-                    </div>
-                    <div class="pain__card-body">
-                        <p class="pain__fact"><strong>【現実】</strong>息子は継ぐ気がない。幹部にも頼みにくい。自分の代でどうするか、決断を先送りしている。</p>
-                        <p class="pain__emotion"><strong>【感情】</strong>会社を守りたい。社員の雇用も守りたい。でも、どうすればいいか分からない。</p>
-                        <p class="pain__future"><strong>【放置すると】</strong>時間が経つほど選択肢が狭まる。最悪、廃業という選択しか残らない。</p>
-                    </div>
-                </div>
-
-                <!-- Pain 6 -->
-                <div class="pain__card">
-                    <div class="pain__card-header">
-                        <div class="pain__card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"></path>
-                            </svg>
-                        </div>
-                        <h3>どこに相談すればいいか分からない</h3>
-                    </div>
-                    <div class="pain__card-body">
-                        <p class="pain__fact"><strong>【現実】</strong>顧問税理士はM&Aの専門家ではない。銀行に相談すると話が広がりそうで怖い。</p>
-                        <p class="pain__emotion"><strong>【感情】</strong>一人で抱え込む孤独感。誰にも言えない重圧。</p>
-                        <p class="pain__future"><strong>【放置すると】</strong>問題が複雑化する。適切なタイミングを逃す。</p>
-                    </div>
-                </div>
-
-                <!-- Pain 7 -->
-                <div class="pain__card">
-                    <div class="pain__card-header">
-                        <div class="pain__card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                        </div>
-                        <h3>胡散臭い営業連絡が多すぎる</h3>
-                    </div>
-                    <div class="pain__card-body">
-                        <p class="pain__fact"><strong>【現実】</strong>M&A仲介会社からのDMや電話が頻繁に来る。どこも同じような話ばかりで、信頼できない。</p>
-                        <p class="pain__emotion"><strong>【感情】</strong>本当に自分のためを考えてくれる人がいるのか。疑心暗鬼になる。</p>
-                        <p class="pain__future"><strong>【放置すると】</strong>相談すること自体を諦める。本当に必要なときに動けなくなる。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pain__message">
-                <p>
-                    <strong>これらの悩みは、あなただけのものではありません。</strong><br>
-                    私たちに相談に来られる物流会社の経営者様が、最初にお話しになることばかりです。
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-       DECISION FRAMEWORK DIAGRAM - 意思決定フレーム
-       ======================================== -->
-    <section class="section diagram" id="diagram">
-        <div class="container">
-            <div class="section__title">
-                <h2><em>構造で見る</em>——物流経営の意思決定</h2>
-                <p class="section__subtitle">複雑に見える悩みも、整理すると構造が見えてきます。</p>
-                <div class="divider"></div>
-            </div>
-
-            <!-- Decision Frame Diagram -->
-            <div class="diagram__block">
-                <h3>意思決定フレーム</h3>
-                <div class="diagram__frame">
-                    <svg viewBox="0 0 800 320" class="diagram__svg">
-                        <!-- Input Box -->
-                        <rect x="20" y="80" width="180" height="160" rx="12" fill="#E8F4FC" stroke="#1976D2"
-                            stroke-width="2" />
-                        <text x="110" y="115" text-anchor="middle" font-size="14" font-weight="600"
-                            fill="#1976D2">経営課題（入力）</text>
-                        <text x="110" y="145" text-anchor="middle" font-size="12" fill="#333">・人手不足</text>
-                        <text x="110" y="165" text-anchor="middle" font-size="12" fill="#333">・燃料費高騰</text>
-                        <text x="110" y="185" text-anchor="middle" font-size="12" fill="#333">・価格転嫁</text>
-                        <text x="110" y="205" text-anchor="middle" font-size="12" fill="#333">・DX投資</text>
-                        <text x="110" y="225" text-anchor="middle" font-size="12" fill="#333">・後継者問題</text>
-
-                        <!-- Arrow 1 -->
-                        <path d="M200 160 L280 160" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)" />
-
-                        <!-- Process Box -->
-                        <rect x="280" y="110" width="180" height="100" rx="12" fill="#FFF3E0" stroke="#E65100"
-                            stroke-width="2" />
-                        <text x="370" y="145" text-anchor="middle" font-size="14" font-weight="600"
-                            fill="#E65100">30分で整理</text>
-                        <text x="370" y="170" text-anchor="middle" font-size="12" fill="#333">論点の明確化</text>
-                        <text x="370" y="190" text-anchor="middle" font-size="12" fill="#333">選択肢の棚卸し</text>
-
-                        <!-- Arrow 2 -->
-                        <path d="M460 160 L540 160" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)" />
-
-                        <!-- Output Box -->
-                        <rect x="540" y="60" width="240" height="200" rx="12" fill="#E8F5E9" stroke="#388E3C"
-                            stroke-width="2" />
-                        <text x="660" y="95" text-anchor="middle" font-size="14" font-weight="600"
-                            fill="#388E3C">選択肢（出力）</text>
-                        <text x="660" y="130" text-anchor="middle" font-size="12" fill="#333">① 現状維持・再構築</text>
-                        <text x="660" y="155" text-anchor="middle" font-size="12" fill="#333">② 内部承継（従業員・親族）</text>
-                        <text x="660" y="180" text-anchor="middle" font-size="12" fill="#333">③ 大企業グループへの統合</text>
-                        <text x="660" y="205" text-anchor="middle" font-size="12" fill="#333">④ PEファンドとの資本提携</text>
-                        <text x="660" y="230" text-anchor="middle" font-size="11" fill="#666">※「売らない」も立派な選択肢</text>
-
-                        <!-- Arrow marker definition -->
-                        <defs>
-                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                                <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
-                            </marker>
-                        </defs>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Profit Squeeze Diagram -->
-            <div class="diagram__block">
-                <h3>利益圧迫の構造（イメージ図）</h3>
-                <p class="diagram__note">※ 模式図であり、具体的な数値を示すものではありません</p>
-                <div class="diagram__profit">
-                    <svg viewBox="0 0 600 280" class="diagram__svg">
-                        <!-- Y Axis -->
-                        <line x1="80" y1="40" x2="80" y2="220" stroke="#333" stroke-width="2" />
-                        <text x="40" y="130" text-anchor="middle" font-size="12" fill="#333"
-                            transform="rotate(-90, 40, 130)">金額</text>
-
-                        <!-- X Axis -->
-                        <line x1="80" y1="220" x2="520" y2="220" stroke="#333" stroke-width="2" />
-                        <text x="180" y="250" text-anchor="middle" font-size="12" fill="#333">数年前</text>
-                        <text x="420" y="250" text-anchor="middle" font-size="12" fill="#333">現在</text>
-
-                        <!-- Revenue Line (flat) -->
-                        <line x1="120" y1="80" x2="480" y2="80" stroke="#1976D2" stroke-width="3" />
-                        <text x="500" y="85" font-size="11" fill="#1976D2">売上</text>
-
-                        <!-- Cost Area (rising) -->
-                        <polygon points="120,150 480,100 480,220 120,220" fill="#FFCDD2" opacity="0.6" />
-                        <line x1="120" y1="150" x2="480" y2="100" stroke="#D32F2F" stroke-width="3" />
-                        <text x="500" y="105" font-size="11" fill="#D32F2F">コスト</text>
-
-                        <!-- Labels -->
-                        <text x="300" y="180" text-anchor="middle" font-size="11" fill="#D32F2F">燃料費↑ 人件費↑</text>
-
-                        <!-- Profit arrows -->
-                        <line x1="140" y1="80" x2="140" y2="145" stroke="#388E3C" stroke-width="2"
-                            stroke-dasharray="4" />
-                        <text x="155" y="115" font-size="10" fill="#388E3C">利益</text>
-
-                        <line x1="460" y1="80" x2="460" y2="102" stroke="#D32F2F" stroke-width="2"
-                            stroke-dasharray="4" />
-                        <text x="475" y="94" font-size="10" fill="#D32F2F">利益↓</text>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-       INDUSTRY OUTLOOK - 業界の構造変化
-       ======================================== -->
-    <section class="section outlook" id="outlook">
-        <div class="container">
-            <div class="section__title">
-                <h2>再編か、承継か、現状維持か——<br><em>業界の構造変化</em>と選択肢</h2>
-                <p class="section__subtitle">物流業界の今後を、煽らず冷静に見てみましょう。</p>
-                <div class="divider"></div>
-            </div>
-
-            <div class="outlook__content">
-                <div class="outlook__card outlook__card--positive">
-                    <div class="outlook__card-number">1</div>
-                    <h3>物流は社会のインフラ</h3>
-                    <p>
-                        EC需要の拡大、サプライチェーンの重要性——<br>
-                        物流は今後も<strong>必要不可欠な産業</strong>であり続けます。<br>
-                        需要がなくなることはありません。
-                    </p>
-                </div>
-
-                <div class="outlook__card outlook__card--neutral">
-                    <div class="outlook__card-number">2</div>
-                    <h3>しかし、再編は避けられない</h3>
-                    <p>
-                        人手不足、コスト上昇、効率化の限界——<br>
-                        中小物流会社の<strong>統合・集約は時代の流れ</strong>です。<br>
-                        これは良い悪いではなく、現実です。
-                    </p>
-                </div>
-
-                <div class="outlook__card outlook__card--action">
-                    <div class="outlook__card-number">3</div>
-                    <h3>だからこそ、早めに整理する価値がある</h3>
-                    <p>
-                        追い詰められてからの判断は、選択肢が限られます。<br>
-                        <strong>余裕があるうちに、頭の中を整理しておく。</strong><br>
-                        それが、良い判断につながります。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-       OPTIONS MAP - 選択肢の構造化（コスト・リスク・メリット付き）
-       ======================================== -->
-    <section class="section options" id="options">
-        <div class="container">
-            <div class="section__title">
-                <h2>物流会社の将来<em>選択肢マップ</em></h2>
-                <p class="section__subtitle">売る・売らないの二択ではありません。選択肢を整理すると、見え方が変わります。</p>
-                <div class="divider"></div>
-            </div>
-
-            <div class="options__grid">
-                <div class="options__category">
-                    <h3 class="options__category-title">外部資本を活用する</h3>
-
-                    <div class="options__card">
-                        <h4>大企業グループ傘下</h4>
-                        <ul class="options__details">
-                            <li class="options__merit">✓ 経営基盤が安定、荷主交渉力UP</li>
-                            <li class="options__risk">△ 経営自由度は低下</li>
-                            <li class="options__time">⏱ 半年〜1年</li>
-                        </ul>
-                    </div>
-
-                    <div class="options__card">
-                        <h4>PEファンドとの資本提携</h4>
-                        <ul class="options__details">
-                            <li class="options__merit">✓ 成長資金を獲得、経営は継続可能</li>
-                            <li class="options__risk">△ EXIT（再売却）が前提</li>
-                            <li class="options__time">⏱ 3〜6ヶ月</li>
-                        </ul>
-                    </div>
-
-                    <div class="options__card">
-                        <h4>取引先・元請けとの統合</h4>
-                        <ul class="options__details">
-                            <li class="options__merit">✓ 取引関係の強化、仕事量安定</li>
-                            <li class="options__risk">△ 依存度が高まる</li>
-                            <li class="options__time">⏱ 3〜6ヶ月</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="options__category">
-                    <h3 class="options__category-title">内部で承継・強化する</h3>
-
-                    <div class="options__card">
-                        <h4>従業員・幹部への承継</h4>
-                        <ul class="options__details">
-                            <li class="options__merit">✓ 会社文化の継続、社員の安心感</li>
-                            <li class="options__risk">△ 資金調達・保証問題</li>
-                            <li class="options__time">⏱ 1〜3年</li>
-                        </ul>
-                    </div>
-
-                    <div class="options__card">
-                        <h4>親族への承継</h4>
-                        <ul class="options__details">
-                            <li class="options__merit">✓ ファミリービジネス継続</li>
-                            <li class="options__risk">△ 本人の意思・適性</li>
-                            <li class="options__time">⏱ 数年単位</li>
-                        </ul>
-                    </div>
-
-                    <div class="options__card">
-                        <h4>現体制で再構築</h4>
-                        <ul class="options__details">
-                            <li class="options__merit">✓ 事業の選択と集中で立て直し</li>
-                            <li class="options__risk">△ 根本解決にならない場合も</li>
-                            <li class="options__time">⏱ 継続的な改善</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="options__message">
-                <p>
-                    <strong>どの選択肢が最適かは、会社の状況・経営者の想い・タイミングによって異なります。</strong><br>
-                    まずは、すべての選択肢を並べて、冷静に整理することから始めませんか。
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-       FLOW SECTION - 相談フロー図
-       ======================================== -->
-    <section class="section flow" id="flow">
-        <div class="container">
-            <div class="section__title">
-                <h2>30分で頭が整理される——<br><em>相談フロー</em>と得られるもの</h2>
-                <p class="section__subtitle">相談したら何が起きるのか？具体的にご説明します。</p>
-                <div class="divider"></div>
-            </div>
-
-            <div class="flow__steps">
-                <div class="flow__step">
-                    <div class="flow__step-number">1</div>
-                    <div class="flow__step-content">
-                        <h3>30分の無料相談</h3>
-                        <p>オンラインで、匿名のままでもOK。<br>今抱えている悩みを、自由にお話しください。</p>
-                    </div>
-                </div>
-                <div class="flow__arrow">→</div>
-                <div class="flow__step">
-                    <div class="flow__step-number">2</div>
-                    <div class="flow__step-content">
-                        <h3>問題の整理</h3>
-                        <p>何が本当の課題なのか、一緒に整理します。<br>「今すぐ決めなくていいこと」も明確に。</p>
-                    </div>
-                </div>
-                <div class="flow__arrow">→</div>
-                <div class="flow__step">
-                    <div class="flow__step-number">3</div>
-                    <div class="flow__step-content">
-                        <h3>選択肢の可視化</h3>
-                        <p>売却だけでなく、すべての選択肢を提示。<br>それぞれのメリット・リスクをご説明します。</p>
-                    </div>
-                </div>
-                <div class="flow__arrow">→</div>
-                <div class="flow__step">
-                    <div class="flow__step-number">4</div>
-                    <div class="flow__step-content">
-                        <h3>次のステップが明確に</h3>
-                        <p>今日やるべきこと、半年後に考えること。<br>優先順位が見えるようになります。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flow__result">
-                <h3>30分後、あなたの頭の中は——</h3>
-                <ul>
-                    <li>✓ 漠然とした不安が、具体的な論点に変わる</li>
-                    <li>✓ 選択肢が見える。比較できる</li>
-                    <li>✓ 「今すぐ動く必要があるか」が分かる</li>
-                    <li>✓ 「売らない」という結論も、十分にあり得ると分かる</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-       CASE STUDIES - 相談事例
-       ======================================== -->
-    <section class="section cases" id="cases">
-        <div class="container">
-            <div class="section__title">
-                <h2><em>相談事例</em>のご紹介</h2>
-                <p class="section__subtitle">守秘義務に基づき、匿名化してご紹介します。</p>
-                <div class="divider"></div>
-            </div>
-
-            <div class="cases__grid">
-                <div class="cases__card">
-                    <div class="cases__header">
-                        <span class="cases__label">事例 A</span>
-                        <span class="cases__meta">関東 / 運送会社 / 従業員30名</span>
-                    </div>
-                    <div class="cases__body">
-                        <div class="cases__section">
-                            <h4>悩み</h4>
-                            <p>後継者がいない。社員の雇用を守りたいが、自分の年齢的にも限界を感じていた。</p>
-                        </div>
-                        <div class="cases__section">
-                            <h4>相談後</h4>
-                            <p>選択肢を整理した結果、同業大手への事業譲渡を選択。<br>全従業員の雇用継続を条件に成約。経営者ご本人も顧問として残留。</p>
+                        <div class="partner-card-content">
+                            <h4>大手物流会社・物流グループ</h4>
+                            <p>全国ネットワーク強化、地域密着型企業との連携</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="cases__card">
-                    <div class="cases__header">
-                        <span class="cases__label">事例 B</span>
-                        <span class="cases__meta">関西 / 倉庫・物流 / 従業員50名</span>
-                    </div>
-                    <div class="cases__body">
-                        <div class="cases__section">
-                            <h4>悩み</h4>
-                            <p>設備投資に資金が必要だが、借入は限界。成長を続けたいが手が打てない。</p>
+                    <div class="partner-card">
+                        <div class="partner-card-image">
+                            <img src="./assets/images/partner-corporate.png" alt="事業会社">
                         </div>
-                        <div class="cases__section">
-                            <h4>相談後</h4>
-                            <p>PEファンドとの資本提携を選択。<br>経営権は維持したまま成長資金を確保。設備投資も実現。</p>
+                        <div class="partner-card-content">
+                            <h4>事業会社（物流参入・強化）</h4>
+                            <p>EC事業者、メーカー、小売業の物流内製化</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="cases__card">
-                    <div class="cases__header">
-                        <span class="cases__label">事例 C</span>
-                        <span class="cases__meta">中部 / 運送会社 / 従業員15名</span>
-                    </div>
-                    <div class="cases__body">
-                        <div class="cases__section">
-                            <h4>悩み</h4>
-                            <p>以前、仲介会社に相談したが進まなかった。物流のことを理解していないと感じた。</p>
+                    <div class="partner-card">
+                        <div class="partner-card-image">
+                            <img src="./assets/images/partner-finance.png" alt="PEファンド">
                         </div>
-                        <div class="cases__section">
-                            <h4>相談後</h4>
-                            <p>改めて選択肢を整理した結果、「今は売らない」と決断。<br>再構築プランを立て、3年後を目標に事業承継準備を開始。</p>
+                        <div class="partner-card-content">
+                            <h4>PEファンド・金融機関</h4>
+                            <p>承継型投資、成長支援型投資</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========================================
-       ADVISOR SECTION - 担当者プロフィール
-       ======================================== -->
-    <section class="section advisor" id="advisor">
-        <div class="container">
-            <div class="section__title">
-                <h2>担当者について</h2>
-                <p class="section__subtitle">物流業界を理解したプロが、直接対応します。</p>
-                <div class="divider"></div>
-            </div>
-
-            <div class="advisor__content">
-                <div class="advisor__profile">
-                    <div class="advisor__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </div>
-                    <div class="advisor__info">
-                        <h3>物流業界FA経験 15年以上</h3>
-                        <p class="advisor__career">
-                            大手物流会社 → 物流系投資ファンド → FA（ファイナンシャルアドバイザー）
-                        </p>
-                    </div>
+        <!-- ============================================
+             7. RECENT CASE EXAMPLES
+             ============================================ -->
+        <section class="cases" id="cases">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">最近増えている"事業承継・再編"のケース</h2>
                 </div>
 
-                <div class="advisor__features">
-                    <div class="advisor__feature">
-                        <h4>現場を知っている</h4>
-                        <p>配車、倉庫オペレーション、ドライバー管理——物流現場の実務を理解しています。</p>
+                <div class="cases-grid">
+                    <div class="case-card">
+                        <span class="case-label">事業承継</span>
+                        <h4>後継者不在からの戦略的承継</h4>
+                        <p>地方の中堅運送会社。社長が60代後半、親族内に後継者がおらず、従業員の雇用維持を最優先に大手物流グループへ承継。</p>
                     </div>
-                    <div class="advisor__feature">
-                        <h4>荷主との力関係を理解</h4>
-                        <p>価格交渉の難しさ、長年の取引関係の重さ——経営者様の立場を分かった上でお話しします。</p>
+                    <div class="case-card">
+                        <span class="case-label">グループ参画</span>
+                        <h4>下請構造からの脱却</h4>
+                        <p>元請依存度80%超の運送会社。事業会社の物流子会社として参画し、安定取引基盤と設備投資力を獲得。</p>
                     </div>
-                    <div class="advisor__feature">
-                        <h4>売却を急がせない</h4>
-                        <p>仲介手数料ビジネスではありません。あなたにとって最適な選択を一緒に考えます。</p>
+                    <div class="case-card">
+                        <span class="case-label">業界再編</span>
+                        <h4>2024年問題を見据えた連携</h4>
+                        <p>ドライバー不足が深刻化する中、同業他社との経営統合を実施。配車効率化とドライバー確保を実現。</p>
+                    </div>
+                    <div class="case-card">
+                        <span class="case-label">成長戦略</span>
+                        <h4>倉庫機能の強化による事業拡大</h4>
+                        <p>運送業に倉庫・物流加工機能を追加したい事業会社から提携。EC物流需要の取り込みに成功。</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========================================
-       STANCE SECTION - 我々のスタンス
-       ======================================== -->
-    <section class="section stance" id="stance">
-        <div class="container">
-            <div class="section__title">
-                <h2>私たちのスタンス</h2>
-                <p class="section__subtitle">物流業界の経営者様に選ばれる4つの理由</p>
-                <div class="divider"></div>
-            </div>
+        <!-- ============================================
+             8. COVERAGE / SEO SECTION
+             ============================================ -->
+        <section class="coverage" id="coverage">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">対応領域</h2>
+                </div>
 
-            <div class="stance__grid">
-                <div class="stance__card">
-                    <div class="stance__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="1" y="3" width="15" height="13"></rect>
-                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                        </svg>
-                    </div>
-                    <div class="stance__text">
-                        <h3>物流業界に15年以上の知見</h3>
-                        <p>現場、荷主関係、ドライバー確保——物流業界を理解した上でお話を聞きます。</p>
-                    </div>
-                </div>
-                <div class="stance__card">
-                    <div class="stance__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 8v8M8 12h8"></path>
-                        </svg>
-                    </div>
-                    <div class="stance__text">
-                        <h3>売り手から手数料を取りません</h3>
-                        <p>売り手様からは一切手数料をいただきません。あなたの利益最大化に専念します。</p>
-                    </div>
-                </div>
-                <div class="stance__card">
-                    <div class="stance__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                        </svg>
-                    </div>
-                    <div class="stance__text">
-                        <h3>匿名で相談できます</h3>
-                        <p>初回相談は会社名を伏せたままでOK。情報は外部に一切出しません。</p>
-                    </div>
-                </div>
-                <div class="stance__card">
-                    <div class="stance__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </div>
-                    <div class="stance__text">
-                        <h3>30分で頭を整理</h3>
-                        <p>初回相談は30分。短い時間で「何を考えればいいか」を明確にします。</p>
-                    </div>
+                <div class="coverage-grid">
+                    <span class="coverage-tag">陸運（一般貨物/トラック）</span>
+                    <span class="coverage-tag">倉庫/物流センター</span>
+                    <span class="coverage-tag">海運/港湾</span>
+                    <span class="coverage-tag">フォワーディング/国際物流</span>
+                    <span class="coverage-tag">3PL</span>
+                    <span class="coverage-tag">物流加工/荷役</span>
+                    <span class="coverage-tag">EC物流/ラストワンマイル</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========================================
-       CTA / CONTACT SECTION
-       ======================================== -->
-    <section class="section cta" id="contact">
-        <div class="container">
-            <div class="cta__wrapper">
-                <div class="cta__content">
-                    <h2 class="cta__title">まずは30分、<br>話を聞かせてください</h2>
-
-                    <p class="cta__intro">
-                        売却を前提としない、30分の無料相談です。<br>
-                        匿名のままでも構いません。<br>
-                        物流業界を理解したプロが、経営の選択肢を整理します。
-                    </p>
-
-                    <div class="cta__reassurance">
-                        <h4>ご安心ください</h4>
-                        <ul>
-                            <li>✔ 売却を急かす場ではありません</li>
-                            <li>✔ まずは状況整理だけでも大丈夫です</li>
-                            <li>✔ 相談したからといって何かを決める必要はありません</li>
-                            <li>✔ 匿名のまま、会社名を伏せて相談できます</li>
-                        </ul>
+        <!-- ============================================
+             9. MAIN CTA + FORM
+             ============================================ -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact-inner">
+                    <div class="section-header">
+                        <h2 class="section-title">まずは"現状と選択肢"を整理しませんか</h2>
+                        <p class="section-subtitle">売却前提ではありません／無理な営業はしません</p>
                     </div>
 
-                    <div class="cta__promises">
-                        <div class="cta__promise">
-                            <svg class="cta__promise-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>30分無料</span>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h3>ご相談の流れ</h3>
+                            <div class="contact-address">
+                                <p>1. 下記フォームよりお問い合わせ</p>
+                                <p>2. 担当者より日程調整のご連絡</p>
+                                <p>3. オンラインまたは対面でのご相談</p>
+                                <p>4. 現状整理と選択肢のご提案</p>
+                            </div>
+                            <p style="font-size: var(--fs-xs); opacity: 0.7;">
+                                ※相談＝売却ではありません。まずは現状整理から。
+                            </p>
                         </div>
-                        <div class="cta__promise">
-                            <svg class="cta__promise-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>匿名OK</span>
-                        </div>
-                        <div class="cta__promise">
-                            <svg class="cta__promise-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>物流業界専門</span>
-                        </div>
-                        <div class="cta__promise">
-                            <svg class="cta__promise-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>情報非公開</span>
+
+                        <div class="contact-form-wrapper">
+                            <p class="contact-form-intro">
+                                以下のフォームにご記入ください。<br>
+                                担当者より2営業日以内にご連絡いたします。
+                            </p>
+                            <form id="contactForm" action="#" method="POST">
+                                <div class="form-group">
+                                    <label class="form-label" for="revenue">年商レンジ<span class="required">*</span></label>
+                                    <select class="form-input" id="revenue" name="revenue" required>
+                                        <option value="">選択してください</option>
+                                        <option value="1億円未満">1億円未満</option>
+                                        <option value="1〜5億円">1〜5億円</option>
+                                        <option value="5〜10億円">5〜10億円</option>
+                                        <option value="10〜30億円">10〜30億円</option>
+                                        <option value="30〜50億円">30〜50億円</option>
+                                        <option value="50億円以上">50億円以上</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="business">事業領域<span class="required">*</span></label>
+                                    <select class="form-input" id="business" name="business" required>
+                                        <option value="">選択してください</option>
+                                        <option value="陸運（一般貨物/トラック）">陸運（一般貨物/トラック）</option>
+                                        <option value="倉庫/物流センター">倉庫/物流センター</option>
+                                        <option value="海運/港湾">海運/港湾</option>
+                                        <option value="3PL">3PL</option>
+                                        <option value="その他">その他</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="concern">一番の悩み<span class="required">*</span></label>
+                                    <textarea class="form-textarea" id="concern" name="concern" rows="3"
+                                        placeholder="例：後継者がいない、元請依存から脱却したい など" required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn-primary">【無料】現状と選択肢を整理する</button>
+                            </form>
                         </div>
                     </div>
-                </div>
-
-                <div class="cta__form-wrapper">
-                    <h3 class="cta__form-title">30分無料相談のお申し込み</h3>
-
-                    <form class="form" id="contact-form">
-                        <div class="form__group">
-                            <label class="form__label form__label--required">お名前（匿名可）</label>
-                            <input type="text" class="form__input" name="name" placeholder="山田 太郎 または 匿名希望" required>
-                        </div>
-
-                        <div class="form__group">
-                            <label class="form__label form__label--required">メールアドレス</label>
-                            <input type="email" class="form__input" name="email" placeholder="example@email.com"
-                                required>
-                        </div>
-
-                        <div class="form__group">
-                            <label class="form__label">電話番号（任意）</label>
-                            <input type="tel" class="form__input" name="phone" placeholder="03-0000-0000">
-                        </div>
-
-                        <div class="form__group">
-                            <label class="form__label">会社名（任意・匿名OK）</label>
-                            <input type="text" class="form__input" name="company" placeholder="後からでも構いません">
-                        </div>
-
-                        <div class="form__group">
-                            <label class="form__label">現在のご状況（任意）</label>
-                            <textarea class="form__textarea" name="message"
-                                placeholder="例：人手不足が深刻、荷主との価格交渉に悩んでいる、後継者がいない、など"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn--primary btn--large" style="width: 100%;">
-                            30分の無料相談を予約する
-                        </button>
-
-                        <p class="form__note">
-                            ※ ご入力いただいた情報は厳重に管理し、第三者に開示することはありません。
-                        </p>
-                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- ========================================
-       FOOTER
-       ======================================== -->
+    <!-- ============================================
+         10. FOOTER
+         ============================================ -->
     <footer class="footer" id="footer">
         <div class="container">
-            <div class="footer__content">
-                <div class="footer__company">
-                    <p class="footer__company-name">MOTAS GROUP株式会社</p>
-                    <div class="footer__info">
-                        <p>〒100-0005 東京都千代田区丸の内1丁目8番3号</p>
-                        <p>丸の内トラストタワーN館19階</p>
-                        <p>中小企業庁 M&A支援機関登録（登録番号 No.47）</p>
-                    </div>
-                </div>
-
-                <div class="footer__policy">
-                    <h4>情報の取り扱いについて</h4>
-                    <p>
-                        お客様からお預かりする情報は、厳重に管理し、第三者に無断で開示することはありません。<br>
-                        ご相談の初期段階では、会社名・詳細情報を伏せた形での対応にも対応しています。<br>
-                        段階的な情報開示を通じて、安心してご相談いただける環境を整えています。
-                    </p>
-                </div>
-            </div>
-
-            <div class="footer__bottom">
-                <p>&copy; 2024 MOTAS GROUP All Rights Reserved.</p>
+            <div class="footer-bottom">
+                <p class="footer-brand">物流ネクストパートナーズ</p>
+                <p class="copyright">© 2025 物流ネクストパートナーズ All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

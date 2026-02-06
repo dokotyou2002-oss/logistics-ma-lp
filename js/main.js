@@ -1,247 +1,180 @@
-/* ===========================================
-   物流・運送業M&A特化LP - Main JavaScript
-   =========================================== */
+/* ============================================
+   物流ネクスト Landing Page - Main JavaScript
+   Interactions, Animations, Form Handling
+   ============================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Smooth scroll for anchor links
-    initSmoothScroll();
+    // ============================================
+    // Scroll Animations (Fade In)
+    // ============================================
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-    // Form handling
-    initFormHandling();
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
 
-    // Scroll animations
-    initScrollAnimations();
-});
+    // Observe all fade-in elements
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
 
-/**
- * Smooth scroll to anchor links
- */
-function initSmoothScroll() {
-    const links = document.querySelectorAll('a[href^="#"]');
+    // ============================================
+    // Scroll to Top Button
+    // ============================================
+    const scrollTopBtn = document.getElementById('scrollTop');
 
-    links.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
 
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ============================================
+    // Smooth Scroll for Anchor Links
+    // ============================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
             const targetElement = document.querySelector(targetId);
-
             if (targetElement) {
-                const headerOffset = 80;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
+                e.preventDefault();
+                const offsetTop = targetElement.offsetTop - 20;
                 window.scrollTo({
-                    top: offsetPosition,
+                    top: offsetTop,
                     behavior: 'smooth'
                 });
             }
         });
     });
-}
 
-/**
- * Form validation and handling
- */
-function initFormHandling() {
-    const form = document.getElementById('contact-form');
+    // ============================================
+    // Form Handling
+    // ============================================
+    const contactForm = document.getElementById('contactForm');
 
-    if (!form) return;
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
+            // Get form data
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
 
-        // Validate form
-        if (validateForm(form)) {
-            // Collect form data
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
+            // Validate required fields
+            if (!data.revenue || !data.business || !data.concern) {
+                alert('必須項目をご入力ください。');
+                return;
+            }
 
-            // For demo purposes, log and show success
-            console.log('Form submitted:', data);
+            // Show success message (in production, send to server)
+            alert('お問い合わせありがとうございます。\n担当者より折り返しご連絡いたします。');
 
-            // Show success message
-            showSuccessMessage(form);
-        }
-    });
+            // Reset form
+            this.reset();
 
-    // Real-time validation on blur
-    const inputs = form.querySelectorAll('input, select, textarea');
-    inputs.forEach(input => {
-        input.addEventListener('blur', function () {
-            validateField(this);
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-
-        // Clear error on focus
-        input.addEventListener('focus', function () {
-            clearFieldError(this);
-        });
-    });
-}
-
-/**
- * Validate entire form
- */
-function validateForm(form) {
-    let isValid = true;
-    const requiredFields = form.querySelectorAll('[required]');
-
-    requiredFields.forEach(field => {
-        if (!validateField(field)) {
-            isValid = false;
-        }
-    });
-
-    // Scroll to first error
-    if (!isValid) {
-        const firstError = form.querySelector('.form__group--error');
-        if (firstError) {
-            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
     }
 
-    return isValid;
-}
+    // ============================================
+    // Add subtle parallax effect to hero
+    // ============================================
+    const hero = document.querySelector('.hero');
 
-/**
- * Validate single field
- */
-function validateField(field) {
-    const parent = field.closest('.form__group');
-    let isValid = true;
-    let errorMessage = '';
-
-    // Required check
-    if (field.hasAttribute('required') && !field.value.trim()) {
-        isValid = false;
-        errorMessage = 'この項目は必須です';
-    }
-
-    // Email validation
-    if (field.type === 'email' && field.value) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(field.value)) {
-            isValid = false;
-            errorMessage = '正しいメールアドレスを入力してください';
-        }
-    }
-
-    // Phone validation
-    if (field.type === 'tel' && field.value) {
-        const phoneRegex = /^[\d\-+()]+$/;
-        if (!phoneRegex.test(field.value)) {
-            isValid = false;
-            errorMessage = '正しい電話番号を入力してください';
-        }
-    }
-
-    // Update UI
-    if (!isValid) {
-        showFieldError(parent, errorMessage);
-    } else {
-        clearFieldError(field);
-    }
-
-    return isValid;
-}
-
-/**
- * Show field error
- */
-function showFieldError(parent, message) {
-    if (!parent) return;
-
-    parent.classList.add('form__group--error');
-
-    // Remove existing error
-    const existingError = parent.querySelector('.form__error');
-    if (existingError) {
-        existingError.remove();
-    }
-
-    // Add error message
-    const errorElement = document.createElement('span');
-    errorElement.className = 'form__error';
-    errorElement.textContent = message;
-    parent.appendChild(errorElement);
-
-    // Style the input
-    const input = parent.querySelector('input, select, textarea');
-    if (input) {
-        input.style.borderColor = '#dc2626';
-    }
-}
-
-/**
- * Clear field error
- */
-function clearFieldError(field) {
-    const parent = field.closest('.form__group');
-    if (!parent) return;
-
-    parent.classList.remove('form__group--error');
-
-    const errorElement = parent.querySelector('.form__error');
-    if (errorElement) {
-        errorElement.remove();
-    }
-
-    field.style.borderColor = '';
-}
-
-/**
- * Show success message after form submission
- */
-function showSuccessMessage(form) {
-    const wrapper = form.closest('.cta__form-wrapper');
-
-    wrapper.innerHTML = `
-    <div style="text-align: center; padding: 2rem 0;">
-      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#e67e22" stroke-width="2" style="margin-bottom: 1.5rem;">
-        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-      </svg>
-      <h3 style="color: #0a1628; font-size: 1.5rem; margin-bottom: 1rem;">
-        お申し込みありがとうございます
-      </h3>
-      <p style="color: #64748b; line-height: 1.8;">
-        ご入力いただいた内容を確認の上、<br>
-        2営業日以内に担当者よりご連絡いたします。
-      </p>
-    </div>
-  `;
-
-    // Scroll to success message
-    wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-
-/**
- * Scroll-triggered animations
- */
-function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll(
-        '.check-list__item, .step, .strength, .diagram__box'
-    );
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
+    if (hero && window.innerWidth > 768) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            if (scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                hero.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
             }
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
+    }
 
-    animatedElements.forEach((el, index) => {
-        // Set initial state
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+    // ============================================
+    // Counter Animation for Numbers (if needed)
+    // ============================================
+    function animateValue(element, start, end, duration) {
+        const range = end - start;
+        const startTime = performance.now();
 
-        observer.observe(el);
-    });
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(start + range * easeOut);
+            element.textContent = current;
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            }
+        }
+
+        requestAnimationFrame(update);
+    }
+
+    // ============================================
+    // Mobile Menu (if needed in future)
+    // ============================================
+    // Placeholder for mobile navigation toggle
+
+    // ============================================
+    // Console welcome message
+    // ============================================
+    console.log('%c物流ネクスト', 'font-size: 24px; font-weight: bold; color: #1a365d;');
+    console.log('%c10年後も、輝き続ける物流会社へ。', 'font-size: 14px; color: #4a5568;');
+});
+
+// ============================================
+// Utility: Debounce Function
+// ============================================
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// ============================================
+// Utility: Throttle Function
+// ============================================
+function throttle(func, limit) {
+    let inThrottle;
+    return function (...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
 }
